@@ -227,7 +227,7 @@ const Login = () => {
       } else {
         localStorage.setItem("authToken", json.authToken);
         localStorage.setItem('userEmail', credentials.email);
-        navigate("/");
+        navigate("/home");
       }
     } catch (error) {
       setValidationError('An error occurred. Please try again later.');
