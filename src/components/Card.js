@@ -27,7 +27,7 @@ export default function Card(props) {
             <p style={{ height: '10rem' }}>{props.Item.description}</p>
             <p>${props.Item.price}/day</p>
             <hr></hr>
-            <button className='btn btn-success justify-center ms-2' onClick={handleAddToCart}>Rent</button>
+            <button className='btn justify-center ms-2' style={{ backgroundColor: ' #ff7e5f', color: 'white' }} onClick={handleAddToCart}>Rent</button>
           </div>
         </div>
       </div>

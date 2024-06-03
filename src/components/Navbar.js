@@ -26,7 +26,7 @@ export default function Navbar() {
         </Logo>
         <NavLinks>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
           <NavLink to="/myOrder">Rented Items</NavLink>
           <NavLink to="/seller">Become a Renter</NavLink>
         </NavLinks>
