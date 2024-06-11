@@ -11,31 +11,34 @@ export default function Carousal() {
       <div className="carousel-inner" style={{ height: '100%' }}>
         <div className="carousel-item active" style={{ height: '100%' }}>
           <img
-            src="https://d2tez01fe91909.cloudfront.net/wp-content/uploads/2023/04/cheapest-place-to-rent-a-car.webp"
+            src="car1.avif"
             className="d-block w-100 h-100"
             style={{ objectFit: 'cover' }}
             alt="Rental Car"
           />
         </div>
+
         <div className="carousel-item" style={{ height: '100%' }}>
           <img
-            src="https://mtstradesupplies.co.uk/wp-content/uploads/2022/11/Workbenches.jpg"
-            className="d-block w-100 h-100"
-            style={{ objectFit: 'cover' }}
-            alt="Equipment and Tools"
-          />
-        </div>
-        <div className="carousel-item" style={{ height: '100%' }}>
-          <img
-            src="https://hips.hearstapps.com/hmg-prod/images/camping-ideas-1561136670.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*"
+            src="https://plus.unsplash.com/premium_photo-1661877360520-f70603f7c0d8?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100 h-100"
             style={{ objectFit: 'cover' }}
             alt="Camping Gear"
           />
         </div>
+
         <div className="carousel-item" style={{ height: '100%' }}>
           <img
-            src="https://katiecouric.com/wp-content/uploads/2022/09/best_clothing_rental_options-scaled.jpeg"
+            src="https://images.unsplash.com/photo-1636115305669-9096bffe87fd?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className="d-block w-100 h-100"
+            style={{ objectFit: 'cover' }}
+            alt="Equipment and Tools"
+          />
+        </div>
+
+        <div className="carousel-item" style={{ height: '100%' }}>
+          <img
+            src="https://images.unsplash.com/photo-1620912738725-1e5f0e49e97d?q=80&w=1778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100 h-100"
             style={{ objectFit: 'cover' }}
             alt="Clothing and Accessories"
@@ -43,28 +46,13 @@ export default function Carousal() {
         </div>
         <div className="carousel-item" style={{ height: '100%' }}>
           <img
-            src="https://www.retailtouchpoints.com/wp-content/uploads/2023/07/Zales-Rocksbox.png"
+            src="https://plus.unsplash.com/premium_photo-1661645433820-24c8604e4db5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100 h-100"
             style={{ objectFit: 'cover' }}
             alt="Jewelry and Accessories"
           />
         </div>
-        <div className="carousel-item" style={{ height: '100%' }}>
-          <img
-            src="https://italianrealestatecompany.com/wp-content/uploads/2022/11/chianti-italy-1024x643.jpg"
-            className="d-block w-100 h-100"
-            style={{ objectFit: 'cover' }}
-            alt="Property and Land"
-          />
-        </div>
-        <div className="carousel-item" style={{ height: '100%' }}>
-          <img
-            src="https://cdn.firstcry.com/education/2023/01/13101355/Names-Of-Household-Appliances-In-English.jpg"
-            className="d-block w-100 h-100"
-            style={{ objectFit: 'cover' }}
-            alt="Household Items"
-          />
-        </div>
+
       </div>
       <button
         className="carousel-control-prev"

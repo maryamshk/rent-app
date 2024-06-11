@@ -1,0 +1,954 @@
+[
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Electric Drill",
+    "img": "https://tolsen.com.ph/cdn/shop/products/fd.jpg?v=1570589857",
+    "description": "Brand: Tolsen, A powerful electric drill by Tolsen for various construction and DIY projects, Condition: Lightly used, well-maintained",
+    "price": 10
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Circular Saw",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStz7tDFr_FW0Zk6yzSC0UGTJtJg0_AOqIVLQ&s",
+    "description": "Brand: Dewalt, A high-quality circular saw by Dewalt for precise cutting, Condition: Moderately used, excellent working condition",
+    "price": 15
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Welding Machine",
+    "img": "https://hyundaipower.com.pk/wp-content/uploads/2020/10/HWTIG160-1-400x400.jpg",
+    "description": "Brand: Hyundai, A reliable welding machine by Hyundai for professional welding tasks, Condition: New, barely used",
+    "price": 25
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Angle Grinder",
+    "img": "https://thetoolstop.pk/wp-content/uploads/2022/10/AG75028_500x.webp",
+    "description": "Brand: INGCO, The INGCO AG8508 Angle Grinder 950W 115mm (4 Inch) for grinding and cutting, Condition: Lightly used, excellent condition",
+    "price": 12
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Air Compressor",
+    "img": "https://media.licdn.com/dms/image/D5612AQEqvID4JEvibw/article-cover_image-shrink_600_2000/0/1698290303216?e=2147483647&v=beta&t=mb03dR3bc4HgGf4eEOX_QfT-_Rt0k9EOKwHPD9C-R4s",
+    "description": "Brand: Generic, A versatile air compressor for various pneumatic tools, Condition: Heavily used, fully functional",
+    "price": 20
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Electric Pressure Washer",
+    "img": "https://m.media-amazon.com/images/I/41N-qCY5dhL._AC_.jpg",
+    "description": "Brand: Generic, 4000 PSI 26 GPM Power Washer Electric Powered with 25 FT Hose 4 Interchangeable Nozzle Foam Cannon for Cars Patios and more, Condition: Lightly used, good condition",
+    "price": 20
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Cordless Screwdriver",
+    "img": "https://www.bosch-professional.com/pk/en/ocsmedia/322934-54/application-image/1434x828/cordless-screwdriver-bosch-go-06019h2100.png",
+    "description": "Brand: Bosch, A cordless screwdriver by Bosch for efficient screwing tasks, Condition: New, never used",
+    "price": 8
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Laser Level",
+    "img": "https://buildpk.s3.ap-southeast-1.amazonaws.com/uploads/all/2cpz3bzmP35u9xKLi6V3DiAhnP47Q8xOYruYJuIX.jpg",
+    "description": "Brand: Fixtec, A Fixtec laser level for accurate leveling and alignment, Condition: Moderately used, well-maintained",
+    "price": 10
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Airless Paint Sprayer",
+    "img": "https://m.media-amazon.com/images/I/71JYJyIIfpS._AC_SL1500_.jpg",
+    "description": "Brand: Graco, The Graco Magnum 262800 X5 Stand Airless Paint Sprayer for professional painting, Condition: New, used once",
+    "price": 30
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Tile Cutter",
+    "img": "https://m.media-amazon.com/images/I/61ncJxVkuML._AC_SL1500_.jpg",
+    "description": "Brand: VEVOR, The VEVOR Tile Cutter 48 Inch, Manual Tile Cutter All-Steel Frame with Laser Guide, Condition: Heavily used, still works great",
+    "price": 20
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Power Generator",
+    "img": "https://www.allpoweramerica.com/cdn-cgi/image/quality%3D85/assets/images/generators/all-power%20generators/apg3014cs-2000w-genset/apg3014cs-generator-carbon-sensor_1.jpg",
+    "description": "Brand: All Power, APG3014 - 2000-Watt Gas Powered Portable Generator with Carb, Condition: Lightly used, well-maintained",
+    "price": 25
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Jackhammer",
+    "img": "https://m.media-amazon.com/images/I/61dECsvnMoL.jpg",
+    "description": "Brand: CCTi, 2200 Watt Electric Demolition Jack Hammer 1400 BPM Concrete Breaker, includes Point and Flat Chisels, Condition: Moderately used, excellent condition",
+    "price": 35
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Concrete Mixer",
+    "img": "https://image.made-in-china.com/2f0j00yoFiLbJqwCpV/700L-800L-Large-Capacity-Diesel-Portable-Mini-Concrete-Cement-Mixers-Machine-Price.jpg",
+    "description": "Brand: Generic, 700L 800L Large Capacity Diesel Portable Mini Concrete Cement Mixers, Condition: Heavily used, fully functional",
+    "price": 40
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Lawn Mower",
+    "img": "https://i5.walmartimages.com/seo/Yard-Machines-21-in-Walk-Behind-Push-Lawn-Mower-with-140cc-Briggs-Stratton-Gas-Powered-Engine_a93bdfd8-845e-4b3f-931c-352e973924c3.6fcceac9fa0fb79e2bf11c3109c3d48b.jpeg",
+    "description": "Brand: Yard Machines, Yard Machines 21-in Walk Behind Push Lawn Mower with 140cc Briggs & Stratton Gas Powered Engine, Condition: New, barely used",
+    "price": 15
+  },
+  {
+    "categoryName": "Equipment and Tools",
+    "name": "Chainsaw",
+    "img": "https://dropinblog.net/34247033/files/featured/stihl-chainsaw.jpg",
+    "description": "Brand: STIHL, STIHL MS 362 Chainsaw - Professional Use Mid Size Chainsaws, Condition: Moderately used, well-maintained",
+    "price": 20
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Toyota Camry",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhOZ7ZkcZH9D_Dvq7nfkDXVMQUBRaBI9OGA&s",
+    "description": "Brand and Model: Toyota Camry, Seats: 5, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Air conditioning, GPS, Bluetooth connectivity, Condition: Lightly used, well-maintained",
+    "price": 70
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Ford Explorer",
+    "img": "https://theamericancargarage.co.uk/wp-content/uploads/2023/07/ec.jpg",
+    "description": "Brand and Model: Ford Explorer, Seats: 7, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: 4WD, air conditioning, GPS, leather seats, Condition: Moderately used, excellent condition",
+    "price": 90
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Honda Fit",
+    "img": "https://www.cnet.com/a/img/resize/928e1ca0186ac5f339dc110a73ae985fec2c1fd1/hub/2018/05/23/7173ead9-6e73-43e9-81b6-7e2cf165bc18/2018-honda-fit-promo.jpg?auto=webp&width=768",
+    "description": "Brand and Model: Honda Fit, Seats: 5, Fuel Type: Gasoline, Transmission: Manual, Additional Features: Air conditioning, Bluetooth connectivity, rearview camera, Condition: Lightly used, well-maintained",
+    "price": 60
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Honda Odyssey",
+    "img": "https://mma.prnewswire.com/media/1221038/American_Honda_Motor_Co_2021_Honda_Odyssey_Front_Wedge.jpg?p=facebook",
+    "description": "Brand and Model: Honda Odyssey, Seats: 8, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Air conditioning, rear entertainment system, GPS, Condition: Lightly used, well-maintained",
+    "price": 100
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Harley-Davidson Sportster",
+    "img": "https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2024/2024-sportster-s/2024-sportster-s-m10b/360/2024-sportster-s-m10b-motorcycle-09.jpg?impolicy=myresize&rw=1600",
+    "description": "Brand and Model: Harley-Davidson Sportster, Seats: 2, Fuel Type: Gasoline, Transmission: Manual, Additional Features: Saddlebags, windscreen, Condition: Lightly used, well-maintained",
+    "price": 150
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Vespa GTS",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREN8bpDvizOEnyT0JVSwcYx9QbwfZEghTKQ&s",
+    "description": "Brand and Model: Vespa GTS, Seats: 2, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Under-seat storage, USB charger, Condition: New, barely used",
+    "price": 40
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Mazda MX-5",
+    "img": "https://www.cnet.com/a/img/resize/2748f02f46bf1fe606dfc97b80efe2fd0018495b/hub/2020/05/26/d236f949-5d95-4376-91bb-dd90493fd81f/miata-promo.jpg?auto=webp&width=1920",
+    "description": "Brand and Model: Mazda MX-5, Seats: 2, Fuel Type: Gasoline, Transmission: Manual, Additional Features: Convertible, sporty design, Condition: Lightly used, well-maintained",
+    "price": 80
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Mercedes-Benz S-Class",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/640px-Mercedes-Benz_W223_IMG_6663.jpg",
+    "description": "Brand and Model: Mercedes-Benz S-Class, Seats: 5, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Luxury sedan, leather interior, advanced tech, Condition: New, barely used",
+    "price": 200
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Honda Accord",
+    "img": "https://di-uploads-pod10.dealerinspire.com/pacifichondasandiego/uploads/2022/12/2023-Honda-Accord-Exterior-1024x630.jpg",
+    "description": "Brand and Model: Honda Accord, Seats: 5, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Spacious interior, comfortable ride, Condition: Moderately used, good condition",
+    "price": 60
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Toyota RAV4",
+    "img": "https://skyrentcarmiami.com/wp-content/uploads/2022/01/TOYOTA-RAV4-scaled.jpg",
+    "description": "Brand and Model: Toyota RAV4, Seats: 5, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: SUV, spacious cargo area, Condition: Moderately used, good condition",
+    "price": 70
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Tesla Model 3",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCjo_bgicoetMnPnndd9KZIb53W6XXwQ5G_g&s",
+    "description": "Brand and Model: Tesla Model 3, Seats: 5, Fuel Type: Electric, Transmission: Automatic, Additional Features: Advanced autopilot, touchscreen interface, Condition: New, barely used",
+    "price": 150
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Toyota Prius",
+    "img": "https://imageio.forbes.com/specials-images/imageserve/630e9ed34c2d1f31ddab966b/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "description": "Brand and Model: Toyota Prius, Seats: 5, Fuel Type: Hybrid, Transmission: Automatic, Additional Features: Fuel-efficient, eco-friendly, Condition: Lightly used, well-maintained",
+    "price": 50
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Mercedes-Benz Sprinter",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/a2/2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg",
+    "description": "Brand and Model: Mercedes-Benz Sprinter, Seats: 12, Fuel Type: Diesel, Transmission: Automatic, Additional Features: Passenger van, spacious interior, Condition: Moderately used, good condition",
+    "price": 120
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Ford E-350",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs65sgrphjbIf6K6mWoMkPUENRFAH9IWBkAg&s",
+    "description": "Brand and Model: Ford E-350, Seats: 15, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Passenger van, spacious interior, Condition: Moderately used, good condition",
+    "price": 100
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Winnebago Minnie",
+    "img": "https://assets-cdn.interactcp.com/lichtsinn/images/microsites/minnie%20winnie/home,P20page.jpg,qmodified=0625201914460525.pagespeed.ce.G7ip6_FcVb.jpg",
+    "description": "Brand and Model: Winnebago Minnie, Type: RV, Length: 22 feet, Sleeps: 4, Fuel Type: Gasoline, Transmission: Automatic, Additional Features: Kitchen, bathroom, dining area, Condition: Lightly used, well-maintained",
+    "price": 200
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Polaris Sportsman",
+    "img": "https://www.polarisbritain.com/fileadmin/templates/model24/trim/emea/atv/spts570-green.jpg",
+    "description": "Brand and Model: Polaris Sportsman, Type: ATV, Engine: 570cc, Additional Features: Four-wheel drive, power steering, Condition: Moderately used, good condition",
+    "price": 80
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Bayliner Boat",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7aZWiYijnk0_4vYblryx_3ST0CABtCDkHZA&s",
+    "description": "Brand and Model: Bayliner Boat, Type: Motorboat, Length: 20 feet, Capacity: 8 passengers, Fuel Type: Gasoline, Additional Features: Fishing rod holders, swim platform, Condition: Lightly used, well-maintained",
+    "price": 150
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Jetski",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgDyNHPnux0bGz5yy-HA_BUJs_4d2cOoJEKL3ANFRabHYr_CDONTeBqbZQ8_W227DfbpM&usqp=CAU",
+    "description": "Brand and Model: Jetski, Type: Personal Watercraft, Engine: 1000cc, Additional Features: Seating for 2 riders, tow hook, Condition: Lightly used, well-maintained",
+    "price": 120
+  },
+  {
+    "categoryName": "Transportation",
+    "name": "Trek FX 3",
+    "img": "https://www.flammerouge.cc/images/fx3disceq_22_35107_a_primary.png?width=1920&format=webp",
+    "description": "Brand and Model: Trek FX 3, Type: Hybrid Bike, Frame: Aluminum, Gears: 21-speed, Additional Features: Disc brakes, lightweight design, Condition: Moderately used, good condition",
+    "price": 30
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Party Tent",
+    "img": "https://img-us.aosomcdn.com/thumbnail/100/n0/product/2022/05/23/b5i90f180eecf1fcd.jpg",
+    "description": "A spacious tent suitable for outdoor events, providing shelter for guests and activities. Condition: New",
+    "price": 100
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Tables and Chairs",
+    "img": "https://michianapartyrentals.com/wp-content/uploads/2014/06/Tables-And-Chairs-Rental.jpg",
+    "description": "A set of tables and chairs for guests to gather and dine comfortably. Condition: Used, good condition",
+    "price": 50
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Portable Dance Floor",
+    "img": "https://www.portablefloormaker.co.uk/wp-content/uploads/2020/03/Multilok-Auckland-Oak-Portable-Dance-Floor-County-Marquees-Ltd.jpg",
+    "description": "A modular dance floor system that can be easily assembled and disassembled for events. Condition: New",
+    "price": 150
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Lighting Equipment",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2022/12/BC/AY/GL/20184834/stage-sound-and-lighting-equipment-services-on-rent-500x500.jpg",
+    "description": "Professional-grade stage platforms and lighting fixtures to enhance performances and presentations. Condition: Used, excellent condition",
+    "price": 200
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "PA System",
+    "img": "https://indianrenters.com/wp-content/uploads/Sound-System-Hire.jpg",
+    "description": "A powerful sound system for amplifying speeches, music, and announcements during events. Condition: Used, good condition",
+    "price": 100
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Projector and Screen",
+    "img": "https://5.imimg.com/data5/FN/UD/RS/ANDROID-42432890/product-jpeg-500x500.jpeg",
+    "description": "High-quality projector and screen setup for displaying presentations, videos, and slideshows. Condition: Used, fair condition",
+    "price": 50
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Buffet Cooking and Chafing Dishes",
+    "img": "https://s7d2.scene7.com/is/image/PartyRental/5051_category?$subCategory_wide$",
+    "description": "Various buffet cooking and chafing dishes for keeping food items hot and ready for serving. Condition: Used, good condition",
+    "price": 80
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Barbecue Grill",
+    "img": "https://image.made-in-china.com/2f0j00kArWVwYcrEqF/Barbecue-Grill-Commercial-Kitchen-Restaurant-Gas-Lava-Rock-Barbecue-Grill.jpg",
+    "description": "A large grill for cooking delicious barbecue dishes for outdoor events. Condition: Used, fair condition",
+    "price": 100
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "White Large Ice Chest Cooler",
+    "img": "https://just4funpartyrentals.com/wp-content/uploads/2012/10/ice-chest-rentals.jpg",
+    "description": "A large ice chest cooler to keep beverages and food items cold during outdoor events. Condition: Used, good condition",
+    "price": 50
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Triple Beverage Drink Dispensers",
+    "img": "https://static.athome.com/images/w_800,h_800,c_pad,f_auto,fl_lossy,q_auto/v1629492750/p/124203963/triple-cold-beverage-dispenser-with-stand.jpg",
+    "description": "Three beverage dispensers with lids and a black metal stand, perfect for serving various drinks at events. Condition: Used, excellent condition",
+    "price": 70
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Karaoke Machine",
+    "img": "https://files.sysers.com/cp/upload/austinjump/items/Karaoke-Machine.jpg",
+    "description": "A karaoke machine complete with microphones and speaker system for singing entertainment at parties. Condition: Used, fair condition",
+    "price": 150
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Fog Machine with Lights",
+    "img": "https://m.media-amazon.com/images/I/71DYYS0PPRL._AC_SL1500_.jpg",
+    "description": "A fog machine with built-in LED lights, creating stunning visual effects for party atmospheres. Condition: Used, good condition",
+    "price": 80
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Theefun Bubble Machine",
+    "img": "https://m.media-amazon.com/images/I/71VTcnuxjbL.jpg",
+    "description": "A metal automatic bubble machine, adding fun and excitement with bubbles to any event. Condition: Used, fair condition",
+    "price": 40
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Electric Cotton Candy Maker",
+    "img": "https://yasirelectronics.com/wp-content/uploads/2020/12/Cotton-Candy-Machine.jpg",
+    "description": "An electric cotton candy maker for creating delicious cotton candy treats at parties. Condition: Used, good condition",
+    "price": 60
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Popcorn Machine",
+    "img": "https://thefunones.com/wp-content/uploads/989-Popcorn-Machine-Rental.jpg",
+    "description": "A popcorn machine for making freshly popped popcorn, a classic snack option for events. Condition: Used, good condition",
+    "price": 60
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Snow Cone Machine",
+    "img": "https://asrentall.com/wp-content/uploads/2013/01/snow-cone-machine.jpg",
+    "description": "A snow cone machine for creating refreshing snow cones, perfect for cooling down at events. Condition: Used, fair condition",
+    "price": 50
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Photo Booth",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2023/3/294400589/OV/XY/HM/40741619/photo-booth-500x500.jpg",
+    "description": "A classic photo booth setup with a digital camera for capturing memories at events. Condition: Used, fair condition",
+    "price": 80
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Helium Tank",
+    "img": "https://www.brpartyrental.com/images/D/BR267-1.jpg",
+    "description": "A helium tank capable of filling up to 450 balloons, perfect for adding floating decorations to events. Condition: Used, good condition",
+    "price": 70
+  },
+  {
+    "categoryName": "Event and Party Supplies",
+    "name": "Balloon Pump",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61IvxDUvVnL._AC_SL1500_.jpg",
+    "description": "A manual balloon pump for quickly and easily inflating balloons for decorations. Condition: Used, fair condition",
+    "price": 10
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Laptop",
+    "img": "https://www.mega.pk/items_images/DELL+XPS+13+9380+Core+i7+8565U+16GB+RAM+512GB+SSD+4K+UHD+Touch+Screen+Windows+10+pro+Price+in+Pakistan%2C+Specifications%2C+Features_-_18459.webp",
+    "description": "Brand and Model: Dell XPS 13, Specs: Intel Core i7, 16GB RAM, 512GB SSD, Condition: Used, fair condition",
+    "price": 25
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Smartphone",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmW16mxZrBIyM23WzBoAh89owUCmOL9WjXQ&s",
+    "description": "Brand and Model: iPhone 13 Pro, Color: Graphite, Storage: 256GB, Condition: New",
+    "price": 40
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Smartwatch",
+    "img": "https://m.media-amazon.com/images/I/71Tlukf9FTL._AC_UF894,1000_QL80_.jpg",
+    "description": "Brand and Model: Apple Watch Series 7, Color: Midnight, Size: 45mm, Condition: New",
+    "price": 20
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Tablet",
+    "img": "https://static3.webx.pk/files/4012/Images/a5efs221110016l4606-4012-1659894-040123061705661.jpg",
+    "description": "Brand and Model: iPad Pro 12.9-inch, Storage: 512GB, Color: Space Gray, Condition: Lightly used",
+    "price": 30
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Headphones",
+    "img": "https://www.sony.com/image/406fdd3cc9e49e28002ad8baef9185c8?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+    "description": "Brand and Model: Sony WH-1000XM4, Color: Black, Condition: Used, good condition",
+    "price": 15
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Bluetooth Speaker",
+    "img": "https://m.media-amazon.com/images/I/71BD9fxrGUL._AC_UF894,1000_QL80_.jpg",
+    "description": "Brand and Model: JBL Charge 5, Color: Blue, Condition: Used, fair condition",
+    "price": 10
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Camera",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOr7Gwa2TcTI9Ob_tE2EmXr1D_4ldZiOZCdg&s",
+    "description": "Brand and Model: Canon EOS 90D, Lens: EF-S 18-135mm, Condition: Lightly used",
+    "price": 50
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Mirrorless Camera",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bPl9cbJzDTrzYjm4AOMZTD9Njb4ZHIT4pQ&s",
+    "description": "Brand and Model: Sony Alpha A7 III, Lens: FE 24-70mm f/2.8 GM, Condition: New",
+    "price": 60
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Action Camera",
+    "img": "https://rizwancameracentre.pk/wp-content/uploads/2022/03/gopro-hero10-img1-800x800-0-.jpg",
+    "description": "Brand and Model: GoPro Hero 10 Black, Condition: Used, good condition",
+    "price": 25
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Gaming Console",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQruyypC5zJHNJJSttWSaQgjRMnZ4X83TPeOA&s",
+    "description": "Brand and Model: PlayStation 5, Storage: 1TB, Condition: Used, fair condition",
+    "price": 30
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "VR Headset",
+    "img": "https://m.media-amazon.com/images/I/615YaAiA-ML._AC_UF1000,1000_QL80_.jpg",
+    "description": "Brand and Model: Oculus Quest 2, Condition: Used, good condition",
+    "price": 20
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Portable Power Bank",
+    "img": "https://m.media-amazon.com/images/I/41kLuZiF37L._AC_UF894,1000_QL80_.jpg",
+    "description": "Capacity: 20,000mAh, Output: USB-C, USB-A, Condition: New",
+    "price": 15
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Drone",
+    "img": "https://www.w3shopping.com/cdn/shop/files/DJI-Mavic-Air-2-W3-Shopping-1694514386319.jpg?v=1694514387",
+    "description": "Brand and Model: DJI Mavic Air 2, Condition: Used, good condition",
+    "price": 35
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Fitness Tracker",
+    "img": "https://www.tejar.pk/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/f/i/fitbit_charge_5_advanced_fitness_health_tracker_-_black_graphite_stainless_steel_-_2tejar.jpg",
+    "description": "Brand and Model: Fitbit Charge 5, Color: Granite, Condition: Used, fair condition",
+    "price": 10
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Smart Thermostat",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmuR5zZLnQ6q1FGdKgPRQoURugo1IamVX_6Q&s",
+    "description": "Brand and Model: Nest Learning Thermostat, Condition: Used, good condition",
+    "price": 20
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Smart Doorbell",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtiO3LijO1TeH2i4c-dRx8rHjOH2F5rMa0A&s",
+    "description": "Brand and Model: Ring Video Doorbell Pro, Condition: Used, fair condition",
+    "price": 15
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Streaming Device",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9why8UHX0x226w_RndUaKB8kclEvO595r5Q&s",
+    "description": "Brand and Model: Roku Ultra 2021, Condition: Used, good condition",
+    "price": 15
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Wireless Router",
+    "img": "https://www.gtstore.pk/products/large9468-1640422663.jpg",
+    "description": "Brand and Model: ASUS RT-AX86U, Wi-Fi Standard: Wi-Fi 6, Condition: Used, fair condition",
+    "price": 20
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "External Hard Drive",
+    "img": "https://m.media-amazon.com/images/I/81gIYFS+7uL._AC_UF1000,1000_QL80_.jpg",
+    "description": "Brand and Model: Seagate Expansion Desktop, Capacity: 4TB, Condition: Used, good condition",
+    "price": 25
+  },
+  {
+    "categoryName": "Electronic and Gadgets",
+    "name": "Home Security Camera System",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdjWOCWs3V9jyrOuTIgJVXOIVHU75Q03KDCw&s",
+    "description": "Brand and Model: Arlo Pro 4 Spotlight Camera System, Condition: Used, fair condition",
+    "price": 30
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Sofa",
+    "img": "https://woodvalley.pk/cdn/shop/files/122105301_674908323230409_4751219869382971477_n_1024x1024.jpg?v=1696431645",
+    "description": "5 Seater Sofa with Center Table - French Curved Sofa Set. Perfect for cozy evenings and gatherings. Condition: Used, good condition.",
+    "price": 50
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Dining table and chairs",
+    "img": "https://furniture.nobroker.in/cdn/shop/products/Dining_Table_6_Seater_512x439.png?v=1668165630",
+    "description": "Dining Table 6 Seater wood, beige seat color. Ideal for family dinners and gatherings. Condition: Used, fair condition.",
+    "price": 40
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Refrigerator",
+    "img": "https://images.thdstatic.com/productImages/22969583-5416-4b59-9494-fc5d4d4b8c92/svn/white-frigidaire-top-freezer-refrigerators-fftr1814tw-64_600.jpg",
+    "description": "Honeywell H18TFW top Freezer Refrigerator, White. Keep your food fresh and organized with this spacious refrigerator. Condition: Used, good condition.",
+    "price": 60
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Washing machine",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2024/4/407567374/NV/LE/OW/3315598/13-500x500.jpg",
+    "description": "Front Load Washing Machine. Make laundry days easier with this efficient washing machine. Condition: Used, fair condition.",
+    "price": 45
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Microwave oven",
+    "img": "https://enviro.com.pk/cdn/shop/products/WhatsAppImage2023-04-14at9.26.02AM_4_1024x1024.jpg?v=1681452028",
+    "description": "ENVIRO ENR-MI20XM9-BL MICROWAVE OVEN BLACK. Prepare quick and delicious meals with this microwave oven. Condition: Used, good condition.",
+    "price": 25
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Coffee maker",
+    "img": "https://kivahancoffee.com/wp-content/uploads/2021/02/Tanya_R_intro_new.jpg",
+    "description": "Espresso Machine. Enjoy barista-quality coffee at home with this coffee maker. Condition: Used, fair condition.",
+    "price": 75
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Blender",
+    "img": "https://180drinks.ca/wp-content/uploads/2019/04/Blender-Rental.jpg",
+    "description": "1560 watt, 3.0 peak horsepower motor. Fully sealed, push-button controls. Pre-programmed cycles: Smoothie, Batters, Hot Soup, Whole Juice, Ice Cream, Ice Crush. 10 speeds + Pulse. Illuminated LCD timer displays remaining time on blend. Condition: Used, good condition.",
+    "price": 35
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Vacuum cleaner",
+    "img": "https://www.bissellrental.com/userfiles/image/BigGreenProduct/Gallery/Big-Green-Hero.jpg?w=450&h=450",
+    "description": "Big Green Carpet Cleaner(R). Keep your home clean and fresh with this powerful vacuum cleaner. Condition: Used, good condition.",
+    "price": 30
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Pasta Maker",
+    "img": "https://m.media-amazon.com/images/I/812ZjNPHY5L._AC_SL1500_.jpg",
+    "description": "Nuvantee Pasta Maker Machine, Manual Hand Press, Adjustable Thickness Settings, Noodles Maker. Condition: Used, fair condition.",
+    "price": 20
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Pedestal fan",
+    "img": "https://royalfans.com/cdn/shop/products/PedestalFanDeluxe2.jpg?v=1604666683",
+    "description": "Royal Deluxe Pedestal Fans. Stay cool and comfortable during hot days with this pedestal fan. Condition: Used, good condition.",
+    "price": 15
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Bread Maker",
+    "img": "https://target.scene7.com/is/image/Target/GUEST_b66a34db-f0d1-41c6-ac92-16a2c730cd43?wid=488&hei=488&fmt=pjpeg",
+    "description": "Cuisinart Compact 2lb Bread Maker - Stainless Steel - CBK-110P1. Bake delicious homemade bread with ease using this bread maker. Condition: Used, fair condition.",
+    "price": 40
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Food Dehydrator",
+    "img": "https://torkhamimports.pk/cdn/shop/files/270b19b1-91b7-47ec-a1c6-d00ac0bd7b4e.webp?v=1687182565",
+    "description": "AICOK 5 Trays Food Dehydrator. Condition: Used, good condition.",
+    "price": 25
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Electric scooter",
+    "img": "https://m.media-amazon.com/images/I/61cxI-TsCYL._AC_SL1500_.jpg",
+    "description": "EVERCROSS EV06C Electric Scooter, Foldable Electric Scooter for Kids Ages 6-12, Up to 9.3 MPH & 5 Miles, LED Display, Colorful LED Lights. Condition: Used, fair condition.",
+    "price": 30
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Camping tent",
+    "img": "https://m.media-amazon.com/images/I/71DPerT9EKL._AC_SL1500_.jpg",
+    "description": "KAZOO Outdoor Camping Tent 2/4 Person Waterproof Camping Tents Easy Setup Two/Four Man Tent. Condition: Used, good condition.",
+    "price": 20
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Home gym equipment",
+    "img": "https://www.zeesol.net/wp-content/uploads/2024/04/Multi-5-Station-Home-Gym.jpg",
+    "description": "Multi 5 Station Home Gym. Stay fit and active at home with this versatile home gym equipment. Condition: Used, good condition.",
+    "price": 70
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Electric fireplace",
+    "img": "https://www.realflame.com/media/catalog/product/cache/8d7af233335e963408b4b6fcfac6ee78/5/5/5560e-lifestyle-livingroom.jpg",
+    "description": "Real Flame® 65\" Wall- Mount or Recessed Electric Fireplace Insert. Create a cozy ambiance in your home with this electric fireplace. Condition: Used, fair condition.",
+    "price": 55
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Bed frame and mattress",
+    "img": "https://cdn.cort.com/roomservice/images/products/prod820021_main_600.jpg",
+    "description": "Bicester Double Bedframe. Ensure a comfortable and restful sleep with this bed frame and mattress set. Condition: Used, good condition.",
+    "price": 60
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Instant Pot",
+    "img": "https://instantpot.com/cdn/shop/products/112-0126-01_Duo-Plus_6QT_Tile-1_r1_83aa22e8-3451-4c19-a3aa-04c387fd89a0.jpg?v=1707411731&width=1214",
+    "description": "Instant Pot® Duo™ Plus 3-quart Mini Multi-Use Pressure Cooker. Cook delicious meals quickly and easily with this versatile pressure cooker. Condition: Used, fair condition.",
+    "price": 35
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Cookware set",
+    "img": "https://cdn.cort.com/roomservice/images/products/PAC69651_main_600.jpg",
+    "description": "Stainless Steel 5 PC Luxury Cookware Set. Prepare delicious meals with this durable and high-quality cookware set. Condition: Used, good condition.",
+    "price": 25
+  },
+  {
+    "categoryName": "Home and Lifestyle",
+    "name": "Air fryer",
+    "img": "https://instantpot.com/cdn/shop/products/IB_140-3092-01_Vortex-9QT-wVersaZone_ATF_Square_Tile1.jpg?v=1707411536&width=2048",
+    "description": "Instant Vortex 9-Quart Air Fryer with VersaZone Technology. Enjoy crispy and delicious fried food with less oil using this air fryer. Condition: Used, fair condition.",
+    "price": 30
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Designer Handbag",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRItEH7ySzvzb33ZVvWsiNlrhHYI5x0Q4c7qg&s",
+    "description": "Brand: Louis Vuitton, Model: Neverfull MM, Material: Monogram Canvas. Condition: Excellent",
+    "price": 50
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Luxury Watch",
+    "img": "https://luxurytimenyc.com/cdn/shop/products/rolex-submariner-no-date-stainless-steel-black-dial-ceramic-bezel-oyster-bracelet-114060-952312_1024x1024.jpg?v=1662080038",
+    "description": "Brand: Rolex, Model: Submariner, Material: Stainless Steel. Condition: Excellent",
+    "price": 35
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Evening Gown",
+    "img": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1673036085-z-kravuze-yaka-omuzlar-pileli-astarli-simli-uzun-abiye-elbise--mint--by-saygi-8203858-1.jpg?crop=1xw:1xh;center,top&resize=980:*",
+    "description": "By Saygı Mint Long Sleeve Evening Dress. Condition: Good",
+    "price": 70
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Tuxedo",
+    "img": "https://images.hugoboss.com/is/image/boss/hbeu50469191_001_300?$re_fullPageZoom$&qlt=85&fit=crop,1&align=1,1&bgcolor=ebebeb&lastModified=1716992487000&wid=1200&hei=1818",
+    "description": "Designer: Hugo Boss, Style: Slim Fit, Color: Black. Condition: Excellent",
+    "price": 100
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Designer Handbag",
+    "img": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA274/NZVF0036/1BA274_NZV_F0036_V_EOO_SLB.jpg",
+    "description": "Brand: Prada, Model: Galleria, Material: Saffiano Leather. Condition: Excellent",
+    "price": 50
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Suit",
+    "img": "https://cdn.media.amplience.net/i/brooksbrothers/MK01198_NAVY_3?$large$&fmt=auto",
+    "description": "Brand: Brooks Brothers, Style: Two-Piece, Color: Navy Blue. Condition: Excellent",
+    "price": 70
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Ball Gown",
+    "img": "https://www.alinebridal.com/cdn/shop/products/Vintage_Princess_Off_Shoulder_Half_Sleeve_Sky_Blue_Appliques_Ball_Gown_Prom_Dresses_PD00076-1_600x.jpg?v=1628671200",
+    "description": "Vintage Princess Off Shoulder Half Sleeve Dusty Blue Appliques Ball Gown. Condition: Excellent",
+    "price": 30
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Jewelry Set",
+    "img": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/elsa-perettiopen-heart-pendant-and-earrings-set-73482755_1055023_ED.jpg",
+    "description": "Brand: Tiffany & Co., Type: Necklace and Earrings, Material: Sterling Silver. Condition: Excellent",
+    "price": 80
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Sunglasses",
+    "img": "https://images2.ray-ban.com//cdn-record-files-pi/f2a2b356-cf47-4e4c-bd0e-a35900057b03/453350a3-3444-4336-95dd-ad1b007c0da8/0RB3025__L0205__STD__shad__qt.png?impolicy=RB_Product",
+    "description": "Brand: Ray-Ban, Model: Aviator Classic, Lens Color: Green. Condition: Good",
+    "price": 15
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Ball Gown",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1Y-sFJAkvuRNa3CO7vU7QKZTt0pQP2kt7A&s",
+    "description": "Old Rose Ball Gown For Rent. Condition: Excellent",
+    "price": 50
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Scarf",
+    "img": "https://images.vestiairecollective.com/images/resized/w=1246,q=75,f=auto,/produit/camel-cashmere-burberry-scarf-40663278-1_2.jpg",
+    "description": "Classic Check Cashmere Scarf by Burberry in Camel. Brand: Burberry, Style: Classic Check Cashmere, Color: Camel. Condition: Like New",
+    "price": 20
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Designer Clutch",
+    "img": "https://i.pinimg.com/736x/65/f4/d2/65f4d20258051aee57225d20ee663a6b.jpg",
+    "description": "Classic Flap Designer Clutch by Chanel in Lambskin Leather. Brand: Chanel, Model: Classic Flap, Material: Lambskin Leather. Condition: Excellent",
+    "price": 70
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Luxury Sneakers",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2022/12/PW/RD/DO/110138475/whatsapp-image-2022-12-13-at-5-20-13-pm-500x500.jpeg",
+    "description": "Triple S Luxury Sneakers by Balenciaga in White. Brand: Balenciaga, Model: Triple S, Color: White. Condition: Brand New",
+    "price": 50
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Statement Necklace",
+    "img": "https://i.etsystatic.com/21099905/r/il/565868/3653236361/il_570xN.3653236361_1w2x.jpg",
+    "description": "Choker Statement Necklace by Givenchy in Gold-tone Metal. Brand: Givenchy, Style: Choker, Material: Gold-tone Metal. Condition: Pre-owned",
+    "price": 30
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Formal Shoes",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWr-S3y8aS7gR9aVLwMkS-w9OMMWZk4510PA&s",
+    "description": "Oxford Formal Shoes by Salvatore Ferragamo in Patent Leather. Brand: Salvatore Ferragamo, Style: Oxford, Material: Patent Leather. Condition: Lightly Used",
+    "price": 400
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Leather Jacket",
+    "img": "https://www.mrporter.com/variants/images/33258524071930982/in/w2000_q60.jpg",
+    "description": "Motorcycle Leather Jacket by Saint Laurent in Black. Brand: Saint Laurent, Style: Motorcycle, Color: Black. Condition: Like New",
+    "price": 100
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Evening Gloves",
+    "img": "https://www.joanshepp.com/cdn/shop/files/6_8adc7e34-c410-4eb4-bbca-fe1a468f5c17.jpg?v=1700156250",
+    "description": "Opera Length Evening Gloves by Carolina Amato in Black. Brand: Carolina Amato, Style: Opera Length, Color: Black. Condition: Excellent",
+    "price": 20
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Designer Belt",
+    "img": "https://cdn-images.farfetch-contents.com/19/28/16/19/19281619_53518723_1000.jpg",
+    "description": "GG Supreme Designer Belt by Gucci in Leather. Brand: Gucci, Style: GG Supreme, Material: Leather. Condition: Brand New",
+    "price": 10
+  },
+  {
+    "categoryName": "Fashion and Accessories",
+    "name": "Statement Earrings",
+    "img": "https://www.dior.com/couture/ecommerce/media/catalog/product/o/f/1712077259_E3364WOMCY_D03S_E03_GHC.jpg",
+    "description": "J'adior Tribales Statement Earrings by Dior in Gold-tone Metal. Designer: Dior, Style: J'adior Tribales, Material: Gold-tone Metal. Condition: Pre-owned",
+    "price": 40
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Lightweight Backpacking Tent",
+    "img": "https://m.media-amazon.com/images/I/61s7h8x4wPL.jpg",
+    "description": "2-person lightweight backpacking tent in green color. Condition: Like New",
+    "price": 50
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Inflatable Stand-Up Paddle Board (SUP)",
+    "img": "https://atollboards.com/wp-content/uploads/2022/03/1-Aquamarine-Atoll-9-foot-Inflatable-Paddle-Board-Package-e1654619074686-1024x1024-min.jpg",
+    "description": "9ft inflatable stand-up paddle board (SUP) in seagreen color. Condition: Excellent",
+    "price": 150
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Spinning Rod and Reel Combo",
+    "img": "https://favoriteusa.com/cdn/shop/products/OlSaltyComboBlank.jpg?v=1697221887",
+    "description": "Spinning rod and reel combo for versatile fishing. Condition: Pre-owned",
+    "price": 80
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Insulated Picnic Basket",
+    "img": "https://m.media-amazon.com/images/I/81yNp86H1TL.jpg",
+    "description": "Insulated picnic basket with utensils for outdoor dining. Condition: Good",
+    "price": 50
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Folding Beach Chair",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgS2AHD1nDU32H2bSTrjZIYxhCcfzalhiWtg&s",
+    "description": "Folding beach chair with canopy for sun protection. Condition: Like New",
+    "price": 40
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Portable Cornhole Set",
+    "img": "https://m.media-amazon.com/images/I/41FFpvo9keL._AC_.jpg",
+    "description": "Portable cornhole set for outdoor fun. Condition: Excellent",
+    "price": 60
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Hybrid Bicycle",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_rKZ20up-XlgqlZ-sYgQf3GBGRclTf10xA&s",
+    "description": "Medium size hybrid bicycle in baby blue color. Condition: Good",
+    "price": 200
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Complete Set of Golf Clubs with Bag",
+    "img": "https://images-cdn.ubuy.qa/634b293dd3bba879ea6410e6-precise-m3-men-s-complete-golf-clubs.jpg",
+    "description": "Complete set of golf clubs with bag for the golf course. Condition: Like New",
+    "price": 400
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "All-Mountain Skis",
+    "img": "https://www.levelninesports.com/_next/image?url=https%3A%2F%2Fbikewagonmedia.com%2Fmedia%2FL9%2F2023-10-10%2FPNTL01926_Img1.jpg&w=1280&q=75",
+    "description": "All-mountain skis with bindings for versatile skiing. Condition: Excellent",
+    "price": 300
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Soft-Top Surfboard",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyYGs6_cB7fLrrJ2yDFYMCFh-HAwDwhck8Xg&s",
+    "description": "Soft-top surfboard suitable for beginners. Condition: Pre-owned",
+    "price": 200
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Snorkel Mask and Fins Set",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-REF7FpFrtYP4Axiotz37_D26A7ifwW4Uw&s",
+    "description": "Snorkel mask and fins set in yellow color. Condition: Like New",
+    "price": 50
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Snorkel Mask and Fins Set",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-REF7FpFrtYP4Axiotz37_D26A7ifwW4Uw&s",
+    "description": "Snorkel mask and fins set in yellow color. Condition: Like New",
+    "price": 50
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Cruiser Skateboard",
+    "img": "https://m.media-amazon.com/images/I/716pClpkk+S.jpg",
+    "description": "Cruiser skateboard with LED wheels for night rides. Condition: Excellent",
+    "price": 70
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Lightweight Backpack",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkTVnznB5OG3NdSGEeVrAfRxRev6V6hR1A4w&s",
+    "description": "Lightweight backpacking backpack with 40L capacity. Condition: Excellent",
+    "price": 100
+  },
+  {
+    "categoryName": "Recreation and Leisure",
+    "name": "Set of Classic Board Games",
+    "img": "https://m.media-amazon.com/images/I/51lfkzEqqAL._AC_.jpg",
+    "description": "Set of classic board games including Chess, Scrabble, and Monopoly. Condition: Like New",
+    "price": 30
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Vacant Lot for Events",
+    "img": "https://propscout.co.ke/storage/properties/files/lands-plots/thumbnails/-2-acres-plot-for-sale-in-nyari-xw2kg.webp",
+    "description": "A 2-acre plot of land available for event rentals, suitable for weddings, festivals, or outdoor markets.",
+    "price": 500
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Cozy 2-Bedroom House",
+    "img": "https://evinebs.com/wp-content/uploads/2023/05/@UnSiNEFgreoVtig-1024x683.jpg",
+    "description": "A cozy 2-bedroom, 1-bathroom single-family home with a fenced backyard, perfect for a small family or couple.",
+    "price": 150
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Climate-Controlled Storage Units",
+    "img": "https://uploads.website.storedge.com/1e66462a-9dff-43f4-bc53-5cddd0a03ad5/img_7305%20(1)_06072022143652374.jpg",
+    "description": "Climate-controlled storage units ranging from 50 to 200 square feet, suitable for personal or business storage needs.",
+    "price": 20
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Furnished Studio Apartment",
+    "img": "https://assets-global.website-files.com/6298896e3cd8b96e5bded05d/63de5e20f1ac1c1f42646074_High-rise%20apartments%20Dallas.jpg",
+    "description": "A furnished studio apartment in a high-rise building with access to amenities such as a gym, pool, and rooftop terrace.",
+    "price": 80
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Rustic Barn Event Venue",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9MKmF8WMS0in5pPnTuAlTQ3lCRxtNRN__VA&s",
+    "description": "A rustic barn converted into an event space, featuring exposed beams, string lights, and capacity for up to 150 guests. Condition: Good",
+    "price": 700
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Fertile Farmland for Agriculture",
+    "img": "https://qph.cf2.quoracdn.net/main-qimg-c652971f974d90cfc4e7e3198d82f832",
+    "description": "10 acres of fertile farmland available for lease, suitable for organic farming or livestock grazing. Condition: Excellent",
+    "price": 200
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Storefront",
+    "img": "https://d1ih9tlfsfrtid.cloudfront.net/L3UrgQ4SBDtXsCugNCzA_27567-3.jpg",
+    "description": "A 1,500 square foot storefront in a bustling shopping plaza, perfect for retail businesses or pop-up shops. Condition: Good",
+    "price": 300
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Shared Co-Working Space",
+    "img": "https://s3-ap-south-1.amazonaws.com/uploaddocumentstomakeitpublic/wp-content/uploads/2023/04/04202509/Coworking-space-in-mumbai-blog.jpg",
+    "description": "Shared office space with flexible membership options, amenities include high-speed internet, meeting rooms, and complimentary coffee. Condition: Like New",
+    "price": 50
+  },
+  {
+    "categoryName": "Property and Land",
+    "name": "Waterfront Vacation Home",
+    "img": "https://media.vrbo.com/lodging/104000000/103330000/103323300/103323238/507ddf07.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+    "description": "A waterfront vacation home with 4 bedrooms, 3 bathrooms, and a private dock, ideal for family getaways or group retreats. Condition: Excellent",
+    "price": 250
+  }
+]

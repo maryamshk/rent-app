@@ -1,0 +1,13 @@
+.rent-button {
+  background-color: transparent;
+  color: #606060;
+  padding: 6px 1rem;
+  border: 1px solid #ff7e5f;
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: 500;
+}
+
+.rent-button:hover {
+  background-color: #ff7e5f;
+  color: white;
+}

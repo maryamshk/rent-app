@@ -5,7 +5,6 @@ import Card from '../components/Card';
 import Carousal from '../components/Carousal';
 import styled from 'styled-components';
 
-
 export default function Home() {
   const [search, setSearch] = useState('');
   const [itemCategory, setitemCategory] = useState([]);
@@ -110,7 +109,7 @@ export default function Home() {
         </CategoriesContainer>
       </Container>
 
-      <div className="container" style={{ marginTop: '2rem' }}>
+      <div className="container" style={{ marginTop: '2rem', maxWidth: '1500px', width: '100%', margin: '0 auto' }}>
         {itemCategory.length === 0 ? "" : itemCategory.map((data) => (
           <div className='mb-3 row' key={data._id}>
             <div className='fs-3 m-3'>{data.name}</div>
