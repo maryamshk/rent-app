@@ -22,7 +22,6 @@ export default function MyOrder() {
       }
 
       const response = await res.json();
-      console.log(response.orderData.total_price)
 
 
       if (response.orderData && response.orderData.order_data) {
@@ -60,11 +59,9 @@ export default function MyOrder() {
                     </div>
                   ) : (
                     <div className='col-12 col-md-6 col-lg-3'>
-                      <div className="card mt-3" style={{ width: "14rem", height: "60px", backgroundColor: '#feb47b', color: 'white' }}>
+                      <div className="card mt-3" style={{ width: "16rem", height: "62px", backgroundColor: '#feb47b', color: 'white' }}>
                         <div className="card-body">
-                          <h5 className="card-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.name}</h5>
-                          <div className='container w-100 p-0' style={{ height: "38px" }}>
-                          </div>
+                          <h5 className="card-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>{item.name}</h5>
                         </div>
                       </div>
                     </div>

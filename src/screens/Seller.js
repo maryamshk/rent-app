@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 
-
-
 const Seller = () => {
   const [shopName, setShopName] = useState('');
   const [categories, setCategories] = useState([]);
@@ -315,7 +313,7 @@ export default Seller;
 
 const Container = styled.div`
   display: flex;
-  height: 100vh;
+  height: 88.5vh;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);

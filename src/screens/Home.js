@@ -13,21 +13,21 @@ export default function Home() {
   const loadData = async () => {
     try {
       let response = await fetch('http://localhost:5000/api/product', {
-        method: "GET",
+        method: 'GET',
         headers: {
-          'Content-Type': "application/json"
-        }
+          'Content-Type': 'application/json',
+        },
       });
 
       response = await response.json();
       const category = response.category;
-      const product = response.product;  // Extract products
+      const product = response.product;
       setitemCategory(category);
-      setItem(product);  // Set products
+      setItem(product);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error('Error fetching data:', error);
     }
-  }
+  };
 
   useEffect(() => {
     loadData();
@@ -39,11 +39,10 @@ export default function Home() {
     'Event and Party Supplies',
     'Recreation and Leisure',
     'Home and Lifestyle',
+    'Electronic and Gadgets',
     'Fashion and Accessories',
     'Specialty Items',
-    'Land and Property Area',
-    'Electronics',
-    'Books',
+    'Property and Land',
     'Health and Beauty',
     'Food and Beverages',
     'Sports and Outdoors',
@@ -51,9 +50,7 @@ export default function Home() {
     'Costumes',
     'Camping Gear',
     'Party Decorations',
-    'Construction Equipment',
-    'Photography Equipment',
-    'Toys'
+
   ];
 
   return (
@@ -64,16 +61,24 @@ export default function Home() {
           type="search"
           placeholder="Search in RentEase"
           value={search}
-          onChange={(e) => { setSearch(e.target.value); }}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
         />
       </SearchContainer>
       <Container>
         <CategoriesContainer>
           <CategoriesList>
             <ul className="list-group">
-              {displayCategories.map(category => (
+              {displayCategories.map((category) => (
                 <li key={category} className="list-group-item">
-                  {itemCategory.some(cat => cat.name === category) ? category : <span style={{ color: 'gray' }}>{category} (Not Available)</span>}
+                  {itemCategory.some((cat) => cat.name === category) ? (
+                    category
+                  ) : (
+                    <span style={{ color: 'gray' }}>
+                      {category} (Not Available)
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -87,49 +92,78 @@ export default function Home() {
             <CardGrid>
               <CardContainer>
                 <Heading>Millions of rental offerings</Heading>
-                <SubHeading>Explore rental products and services for your needs from millions of offerings worldwide.</SubHeading>
+                <SubHeading>
+                  Explore rental products and services for your needs from
+                  millions of offerings worldwide.
+                </SubHeading>
               </CardContainer>
 
               <CardContainer>
                 <Heading>Assured quality and transactions</Heading>
-                <SubHeading>Ensure quality from verified suppliers, with your orders protected from payment to delivery.</SubHeading>
+                <SubHeading>
+                  Ensure quality from verified suppliers, with your orders
+                  protected from payment to delivery.
+                </SubHeading>
               </CardContainer>
 
               <CardContainer>
                 <Heading>One-stop rental solution</Heading>
-                <SubHeading>Rent seamlessly from product/service search to order management, payment, and fulfillment.</SubHeading>
+                <SubHeading>
+                  Rent seamlessly from product/service search to order
+                  management, payment, and fulfillment.
+                </SubHeading>
               </CardContainer>
 
               <CardContainer>
                 <Heading>Tailored rental experience</Heading>
-                <SubHeading>Get curated benefits, such as exclusive discounts, enhanced protection, and extra support, to help grow your experience every step of the way.</SubHeading>
+                <SubHeading>
+                  Get curated benefits, such as exclusive discounts, enhanced
+                  protection, and extra support, to help grow your experience
+                  every step of the way.
+                </SubHeading>
               </CardContainer>
             </CardGrid>
           </MainContent>
         </CategoriesContainer>
       </Container>
 
-      <div className="container" style={{ marginTop: '2rem', maxWidth: '1500px', width: '100%', margin: '0 auto' }}>
-        {itemCategory.length === 0 ? "" : itemCategory.map((data) => (
-          <div className='mb-3 row' key={data._id}>
-            <div className='fs-3 m-3'>{data.name}</div>
-            <hr />
-            {Item.length === 0 ? "" : Item.filter((item) =>
-              (item.categoryName === data.name) && (item.name.toLowerCase().includes(search.toLowerCase()))
-            ).map((filterItems) => (
-              <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'>
-                <Card Item={filterItems}></Card>
-              </div>
-            ))}
-          </div>
-        ))}
+      <div
+        className="container"
+        style={{
+          marginTop: '2rem',
+          maxWidth: '1500px',
+          width: '100%',
+          margin: '0 auto',
+        }}
+      >
+        {itemCategory.length === 0
+          ? ''
+          : itemCategory.map((data) => (
+            <div className="mb-3 row" key={data._id}>
+              <div className="fs-3 m-3">{data.name}</div>
+              <hr />
+              {Item.length === 0
+                ? ''
+                : Item.filter(
+                  (item) =>
+                    item.categoryName === data.name &&
+                    item.name.toLowerCase().includes(search.toLowerCase())
+                ).map((filterItems) => (
+                  <div
+                    key={filterItems._id}
+                    className="col-12 col-md-6 col-lg-3"
+                  >
+                    <Card Item={filterItems}></Card>
+                  </div>
+                ))}
+            </div>
+          ))}
       </div>
 
       <Footer />
     </>
   );
 }
-
 
 const SearchContainer = styled.div`
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
@@ -149,8 +183,6 @@ const SearchInput = styled.input`
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
 `;
-
-
 
 const Container = styled.div`
   display: flex;
@@ -209,7 +241,7 @@ const CardContainer = styled.div`
   font-family: 'Roboto', sans-serif;
   border: 2px solid #ff7e5f;
   color: white;
-  margin-right:7px;
+  margin-right: 7px;
 `;
 
 const Heading = styled.h1`

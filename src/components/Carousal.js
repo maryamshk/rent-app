@@ -11,19 +11,20 @@ export default function Carousal() {
       <div className="carousel-inner" style={{ height: '100%' }}>
         <div className="carousel-item active" style={{ height: '100%' }}>
           <img
-            src="car1.avif"
-            className="d-block w-100 h-100"
-            style={{ objectFit: 'cover' }}
-            alt="Rental Car"
-          />
-        </div>
-
-        <div className="carousel-item" style={{ height: '100%' }}>
-          <img
             src="https://plus.unsplash.com/premium_photo-1661877360520-f70603f7c0d8?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100 h-100"
             style={{ objectFit: 'cover' }}
             alt="Camping Gear"
+          />
+        </div>
+
+
+        <div className="carousel-item" style={{ height: '100%' }}>
+          <img
+            src="car1.avif"
+            className="d-block w-100 h-100"
+            style={{ objectFit: 'cover' }}
+            alt="Rental Car"
           />
         </div>
 
