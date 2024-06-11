@@ -5,8 +5,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 
 export default function Cart() {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const [dateRanges, setDateRanges] = useState({});
+  const [dateError, setDateError] = useState('');
 
   let data = useCart();
   let dispatch = useDispatchCart();
@@ -21,6 +21,7 @@ export default function Cart() {
 
   const calculateDays = (start, end) => {
     if (!start || !end) return 0;
+
     const diffTime = Math.abs(end - start);    //difference of one object from another in milliseconds 
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;   //convert milliseconds difference into day difference
     return diffDays;
@@ -38,7 +39,6 @@ export default function Cart() {
           order_data: data,
           email: userEmail,
           total_price: totalPrice
-
         }),
       });
       dispatch({ type: 'DROP' });
@@ -47,8 +47,42 @@ export default function Cart() {
     }
   };
 
-  const rentalDays = calculateDays(startDate, endDate);
-  const totalPrice = data.reduce((total, item) => total + item.price * rentalDays, 0);
+  const handleStartDateChange = (index, date) => {
+    setDateRanges(prev => {
+      const endDate = prev[index]?.endDate;
+      if (endDate && date > endDate) {
+        setDateError('Start date cannot be after end date.');
+        return prev;
+      } else {
+        setDateError('');
+        return { ...prev, [index]: { ...prev[index], startDate: date } };
+      }
+    });
+  };
+
+  const handleEndDateChange = (index, date) => {
+    setDateRanges(prev => {
+      const startDate = prev[index]?.startDate;
+      if (startDate && date < startDate) {
+        setDateError('End date cannot be before start date.');
+        return prev;
+      } else {
+        setDateError('');
+        return { ...prev, [index]: { ...prev[index], endDate: date } };
+      }
+    });
+  };
+
+  const rentalDays = data.reduce((total, _, index) => {
+    const { startDate, endDate } = dateRanges[index] || {};
+    return total + calculateDays(startDate, endDate);
+  }, 0);
+
+  const totalPrice = data.reduce((total, item, index) => {
+    const { startDate, endDate } = dateRanges[index] || {};
+    const days = calculateDays(startDate, endDate);
+    return total + item.price * days;
+  }, 0);
 
   return (
     <div>
@@ -64,26 +98,44 @@ export default function Cart() {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
-              <tr key={index}>
-                <th scope='row'>{index + 1}</th>
-                <td>{item.name}</td>
-                <td>${item.price}</td>
-                <td>
-                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-                </td>
-                <td>
-                  <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
-                </td>
-                <td>
-                  <button type='button' className='btn p-0'>
-                    <DeleteIcon onClick={() => { dispatch({ type: 'REMOVE', index: index }); }} />
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {data.map((item, index) => {
+              const { startDate, endDate } = dateRanges[index] || {};
+              return (
+                <tr key={index}>
+                  <th scope='row'>{index + 1}</th>
+                  <td>{item.name}</td>
+                  <td>${item.price}</td>
+                  <td>
+                    <DatePicker
+                      selected={startDate}
+                      onChange={(date) => handleStartDateChange(index, date)}
+                      selectsStart
+                      startDate={startDate}
+                      endDate={endDate}
+                      minDate={new Date()}
+                    />
+                  </td>
+                  <td>
+                    <DatePicker
+                      selected={endDate}
+                      onChange={(date) => handleEndDateChange(index, date)}
+                      selectsEnd
+                      startDate={startDate}
+                      endDate={endDate}
+                      minDate={startDate || new Date()}
+                    />
+                  </td>
+                  <td>
+                    <button type='button' className='btn p-0'>
+                      <DeleteIcon onClick={() => { dispatch({ type: 'REMOVE', index: index }); }} />
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
+        {dateError && <div style={{ color: 'red' }}>{dateError}</div>}
         <div>
           <h1 className='fs-2'>Total Price: ${totalPrice}/-</h1>
         </div>
