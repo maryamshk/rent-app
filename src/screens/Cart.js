@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 
-export default function Cart() {
+export default function Cart({ onCheckout }) {
   const [dateRanges, setDateRanges] = useState({});
   const [dateError, setDateError] = useState('');
 
@@ -22,8 +22,8 @@ export default function Cart() {
   const calculateDays = (start, end) => {
     if (!start || !end) return 0;
 
-    const diffTime = Math.abs(end - start);    //difference of one object from another in milliseconds 
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;   //convert milliseconds difference into day difference
+    const diffTime = Math.abs(end - start);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
     return diffDays;
   };
 
@@ -41,7 +41,12 @@ export default function Cart() {
           total_price: totalPrice
         }),
       });
-      dispatch({ type: 'DROP' });
+      if (response.ok) {
+        dispatch({ type: 'DROP' });
+        onCheckout();
+      } else {
+        console.error('Checkout failed');
+      }
     } catch (error) {
       console.error('Error:', error);
     }

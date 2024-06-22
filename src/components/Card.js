@@ -11,7 +11,6 @@ export default function Card(props) {
     for (const item of data) {
       if (item.id === props.Item._id) {
         product = item;
-
         break;
       }
     }

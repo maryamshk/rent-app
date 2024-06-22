@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
+
 export default function Navbar() {
   let data = useCart();
   const [cartView, setCartView] = useState(false);
@@ -15,6 +16,10 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     navigate('/login');
+  };
+
+  const handleCheckout = () => {
+    setCartView(false);
   };
 
   return (
@@ -27,7 +32,6 @@ export default function Navbar() {
         <NavLinks>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/home">Home</NavLink>
-          <NavLink to="/myOrder">Rented Items</NavLink>
           <NavLink to="/seller">Become a Renter</NavLink>
         </NavLinks>
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -36,18 +40,15 @@ export default function Navbar() {
           </CartButton>
           {cartView && (
             <Modal onClose={() => { setCartView(false); }}>
-              <Cart />
+              <Cart onCheckout={handleCheckout} />
             </Modal>
           )}
           <button onClick={handleLogout} style={{ backgroundColor: 'transparent', borderRadius: '20px', padding: '5px 20px', border: '2px solid white', color: 'white', marginLeft: '12px' }}>Logout</button>
-
         </div>
       </Header>
-
     </>
   );
 }
-
 
 const Header = styled.nav`
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
