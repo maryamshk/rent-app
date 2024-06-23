@@ -11,13 +11,16 @@ export default function Payment({ amount }) {
   const handlePayment = () => {
     if (cardNumber && expiryDate && cvv && nameOnCard) {
       console.log('Payment processed');
-      onClose();
+      // onClose();
     } else {
       setError('Please fill in all fields');
     }
   };
 
   console.log("payment amount", amount)
+
+  let deliveryFee = 145;
+  let TotalPayment = amount + deliveryFee;
 
   return (
     <div className="payment-modal">
@@ -26,8 +29,8 @@ export default function Payment({ amount }) {
         <div className="payment-summary">
           <h3>Order Summary</h3>
           <p>Items Total: ${amount}</p>
-          <p>Delivery Fee: Rs. 145</p>
-          <p>Total Payment: Rs. 424</p>
+          <p>Delivery Fee: Rs. {deliveryFee}</p>
+          <p>Total Payment: Rs. {TotalPayment}</p>
           <p>VAT included, where applicable</p>
           <button
             className="btn"
