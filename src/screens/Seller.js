@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 
 const Seller = () => {
   const [shopName, setShopName] = useState('');
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategory] = useState([]);
   const [isValid, setIsValid] = useState(false);
   const [step, setStep] = useState(1);
   const [productName, setProductName] = useState('');
@@ -23,6 +23,20 @@ const Seller = () => {
     accountNumber: ''
   });
 
+  const response = fetch('http://localhost:5000/api/addProduct', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: {
+      categoryName: categories,
+      name: productName,
+      img: productImage,
+      description: productDescription,
+      price: productPricePerDay
+    }
+  })
+
   const validateShopName = (name) => {
     const isValidLength = name.length >= 4 && name.length <= 20;
     const isValidCharacters = /^[a-zA-Z0-9]*$/.test(name);
@@ -35,13 +49,11 @@ const Seller = () => {
     setIsValid(validateShopName(name));
   };
 
+
   const handleCategoryChange = (selectedCategory) => {
-    setCategories((prevCategories) =>
-      prevCategories.includes(selectedCategory)
-        ? prevCategories.filter((cat) => cat !== selectedCategory)
-        : [...prevCategories, selectedCategory]
-    );
+    setCategory(selectedCategory);
   };
+
 
   const handleProductChange = () => {
     const isValidProductName = productName.length >= 3;
@@ -465,3 +477,4 @@ const CategoryButton = styled.button`
     color: #fff;
   }
 `;
+
