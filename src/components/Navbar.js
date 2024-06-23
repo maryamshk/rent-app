@@ -55,9 +55,12 @@ const Header = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 0px 30px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height:2rem
+  padding-bottom:2px
+  padding-top:10px
 `;
 
 const Logo = styled.div`
