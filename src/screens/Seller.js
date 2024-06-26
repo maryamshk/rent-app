@@ -1,100 +1,64 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Seller = () => {
-  const [shopName, setShopName] = useState('');
-  const [categories, setCategory] = useState([]);
-  const [isValid, setIsValid] = useState(false);
+  const navigate = useNavigate();
+  const [category, setCategory] = useState('');
   const [step, setStep] = useState(1);
   const [productName, setProductName] = useState('');
   const [productImage, setProductImage] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productPricePerDay, setProductPricePerDay] = useState('');
   const [isProductValid, setIsProductValid] = useState(false);
-  const [personalInfo, setPersonalInfo] = useState({
-    name: '',
-    cnic: '',
-    address: ''
-  });
-  const [paymentInfo, setPaymentInfo] = useState({
-    bankName: '',
-    bsbCode: '',
-    accountNumber: ''
-  });
-
-  const response = fetch('http://localhost:5000/api/addProduct', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: {
-      categoryName: categories,
-      name: productName,
-      img: productImage,
-      description: productDescription,
-      price: productPricePerDay
-    }
-  })
-
-  const validateShopName = (name) => {
-    const isValidLength = name.length >= 4 && name.length <= 20;
-    const isValidCharacters = /^[a-zA-Z0-9]*$/.test(name);
-    return isValidLength && isValidCharacters;
-  };
-
-  const handleChange = (e) => {
-    const name = e.target.value;
-    setShopName(name);
-    setIsValid(validateShopName(name));
-  };
-
 
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
   };
 
-
   const handleProductChange = () => {
     const isValidProductName = productName.length >= 3;
-    const isValidProductImage = /\.(jpeg|jpg|png|gif)$/i.test(productImage);
     const isValidProductDescription = productDescription.length > 0;
     const isValidProductPrice = !isNaN(productPricePerDay) && productPricePerDay > 0;
+    const isValidProductImage = productImage.trim().length > 0;
 
-    setIsProductValid(isValidProductName && isValidProductImage && isValidProductDescription && isValidProductPrice);
-  };
-
-  const handlePersonalInfoChange = (e) => {
-    const { name, value } = e.target;
-    setPersonalInfo((prevInfo) => ({
-      ...prevInfo,
-      [name]: value
-    }));
-  };
-
-  const handlePaymentInfoChange = (e) => {
-    const { name, value } = e.target;
-    setPaymentInfo((prevInfo) => ({
-      ...prevInfo,
-      [name]: value
-    }));
+    setIsProductValid(isValidProductName && isValidProductDescription && isValidProductPrice && isValidProductImage);
   };
 
   const handleNextStep = () => {
-    if (step === 1 && isValid) {
+    if (step === 1 && category) {
       setStep(2);
-    } else if (step === 2 && categories.length > 0) {
+    } else if (step === 2 && isProductValid) {
       setStep(3);
-    } else if (step === 3 && isProductValid) {
-      setStep(4);
-    } else if (step === 4 && personalInfo.name && personalInfo.cnic && personalInfo.address) {
-      setStep(5);
     }
   };
 
   const handlePreviousStep = () => {
     if (step > 1) {
       setStep(step - 1);
+    }
+  };
+
+  const handleSubmit = async () => {
+    const response = await fetch('http://localhost:5000/api/addProduct', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        categoryName: category,
+        name: productName,
+        img: productImage,
+        description: productDescription,
+        price: productPricePerDay,
+      }),
+    });
+
+    if (response.ok) {
+      navigate('/home');
+    } else {
+      alert('Failed to add product.');
     }
   };
 
@@ -106,12 +70,12 @@ const Seller = () => {
     'Home and Lifestyle',
     'Fashion and Accessories',
     'Specialty Items',
-    'Land and Property Area'
+    'Land and Property Area',
   ];
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <Container>
         <RightPane>
           <Form>
@@ -124,47 +88,16 @@ const Seller = () => {
               <ProgressStep className={step >= 1 ? "completed" : ""}></ProgressStep>
               <ProgressStep className={step >= 2 ? "completed" : ""}></ProgressStep>
               <ProgressStep className={step >= 3 ? "completed" : ""}></ProgressStep>
-              <ProgressStep className={step >= 4 ? "completed" : ""}></ProgressStep>
-              <ProgressStep className={step >= 5 ? "completed" : ""}></ProgressStep>
             </ProgressBar>
             {step === 1 && (
               <>
-                <h2>Step 1: Name of your shop</h2>
-                <Label htmlFor="shopName">Name of your shop</Label>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    id="shopName"
-                    value={shopName}
-                    onChange={handleChange}
-                    placeholder="shop name"
-                  />
-                  <Domain>.fenzy.store</Domain>
-                  {isValid && <ValidCheck>✔️</ValidCheck>}
-                </InputContainer>
-                <ValidationRules>
-                  <p style={shopName.length >= 4 && shopName.length <= 20 ? { color: '#4caf50' } : { color: '#f44336' }}>
-                    Between 4-20 characters
-                  </p>
-                  <p style={/^[a-zA-Z0-9]*$/.test(shopName) ? { color: '#4caf50' } : { color: '#f44336' }}>
-                    No special characters, spaces, or accented letters
-                  </p>
-                </ValidationRules>
-                <Button className={!isValid ? 'disabled' : ''} disabled={!isValid} onClick={handleNextStep}>
-                  Save and Continue
-                </Button>
-                <InfoText>You can always change your shop name in settings</InfoText>
-              </>
-            )}
-            {step === 2 && (
-              <>
-                <h2>Step 2: What do you sell?</h2>
+                <h2>Step 1: What do you sell?</h2>
                 <Label>What do you sell?</Label>
                 <CategoryContainer>
                   {allCategories.map((cat) => (
                     <CategoryButton
                       key={cat}
-                      selected={categories.includes(cat)}
+                      selected={category === cat}
                       onClick={() => handleCategoryChange(cat)}
                     >
                       {cat}
@@ -172,7 +105,7 @@ const Seller = () => {
                   ))}
                 </CategoryContainer>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                  <Button onClick={handlePreviousStep}>
+                  <Button onClick={handlePreviousStep} disabled={true}>
                     Back
                   </Button>
                   <Button onClick={handleNextStep} style={{ marginLeft: '10px' }}>
@@ -181,9 +114,9 @@ const Seller = () => {
                 </div>
               </>
             )}
-            {step === 3 && (
+            {step === 2 && (
               <>
-                <h2>Step 3: Product Details</h2>
+                <h2>Step 2: Product Details</h2>
                 <Label>Product Details</Label>
                 <InputContainer>
                   <Input
@@ -216,7 +149,7 @@ const Seller = () => {
                     type="number"
                     value={productPricePerDay}
                     onChange={(e) => setProductPricePerDay(e.target.value)}
-                    placeholder="Price Per Day"
+                    placeholder="Price Per Day in $"
                     onBlur={handleProductChange}
                   />
                 </InputContainer>
@@ -230,98 +163,21 @@ const Seller = () => {
                 </div>
               </>
             )}
-            {step === 4 && (
+            {step === 3 && (
               <>
-                <h2>Step 4: Personal Information</h2>
-                <Label>Personal Information</Label>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="name"
-                    value={personalInfo.name}
-                    onChange={handlePersonalInfoChange}
-                    placeholder="Full Name"
-                  />
-                </InputContainer>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="cnic"
-                    value={personalInfo.cnic}
-                    onChange={handlePersonalInfoChange}
-                    placeholder="CNIC"
-                  />
-                </InputContainer>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="address"
-                    value={personalInfo.address}
-                    onChange={handlePersonalInfoChange}
-                    placeholder="Address"
-                  />
-                </InputContainer>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                  <Button onClick={handlePreviousStep}>
-                    Back
-                  </Button>
-                  <Button onClick={handleNextStep}>
-                    Save and Continue
-                  </Button>
-                </div>
-              </>
-            )}
-            {step === 5 && (
-              <>
-                <h2>Step 5: Payment Information</h2>
-                <Label>Payment Information</Label>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="bankName"
-                    value={paymentInfo.bankName}
-                    onChange={handlePaymentInfoChange}
-                    placeholder="Bank Name"
-                  />
-                </InputContainer>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="bsbCode"
-                    value={paymentInfo.bsbCode}
-                    onChange={handlePaymentInfoChange}
-                    placeholder="BSB Code"
-                  />
-                </InputContainer>
-                <InputContainer>
-                  <Input
-                    type="text"
-                    name="accountNumber"
-                    value={paymentInfo.accountNumber}
-                    onChange={handlePaymentInfoChange}
-                    placeholder="Account Number"
-                  />
-                </InputContainer>
-                <Button onClick={() => alert('Account created successfully!')}>
-                  Save and Continue
+                <Button onClick={handleSubmit}>
+                  Submit
                 </Button>
-              </>
-            )}
-            {step === 6 && (
-              <>
-                <h2>Account Successfully Created!</h2>
-                <p>Your account has been created successfully. You can now start using RentEase.</p>
               </>
             )}
           </Form>
         </RightPane>
-      </Container></>
-
+      </Container>
+    </>
   );
 };
 
 export default Seller;
-
 
 const Container = styled.div`
   display: flex;
