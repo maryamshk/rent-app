@@ -6,7 +6,7 @@ import { useCart, useDispatchCart } from '../components/ContextReducer';
 import Modal from '../Modal';
 import Payment from '../components/Payment';
 
-export default function Cart() {
+export default function Cart({ onCheckout }) {
   const [dateRanges, setDateRanges] = useState({});
   const [dateError, setDateError] = useState('');
   const [cartView, setCartView] = useState(false);
@@ -25,6 +25,7 @@ export default function Cart() {
 
   const handleClose = () => {
     setCartView(false)
+    onCheckout();
   }
 
   const calculateDays = (start, end) => {
