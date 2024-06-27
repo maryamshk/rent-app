@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../payment.css';
 import { useNavigate } from 'react-router-dom';
+
 export default function Payment({ amount, onClose }) {
   const navigate = useNavigate();
   const [cardNumber, setCardNumber] = useState('');
@@ -11,13 +12,54 @@ export default function Payment({ amount, onClose }) {
   const [showPaymentForm, setShowPaymentForm] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
+  const validateCardNumber = (number) => {
+    const regex = /^\d{16}$/; // 16 digits
+    return regex.test(number);
+  };
+
+  const validateExpiryDate = (date) => {
+    const regex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; // MM/YY format
+    return regex.test(date);
+  };
+
+  const validateCVV = (cvv) => {
+    const regex = /^\d{3}$/; // 3 digits
+    return regex.test(cvv);
+  };
+
+  const validateName = (name) => {
+    const regex = /^[a-zA-Z\s]+$/; // Letters and spaces
+    return regex.test(name);
+  };
+
   const handlePayment = () => {
-    if (cardNumber && expiryDate && cvv && nameOnCard) {
-      console.log('Payment processed');
-      setPaymentSuccess(true);
-    } else {
+    if (!nameOnCard || !cardNumber || !expiryDate || !cvv) {
       setError('Please fill in all fields');
+      return;
     }
+
+    if (!validateName(nameOnCard)) {
+      setError('Invalid name. Name must contain only letters and spaces.');
+      return;
+    }
+
+    if (!validateCardNumber(cardNumber)) {
+      setError('Invalid card number. Must be 16 digits.');
+      return;
+    }
+
+    if (!validateExpiryDate(expiryDate)) {
+      setError('Invalid expiry date. Must be in MM/YY format.');
+      return;
+    }
+
+    if (!validateCVV(cvv)) {
+      setError('Invalid CVV. Must be 3 digits.');
+      return;
+    }
+
+    console.log('Payment processed');
+    setPaymentSuccess(true);
   };
 
   let deliveryFee = 145;
@@ -100,6 +142,6 @@ export default function Payment({ amount, onClose }) {
           </div>
         )}
       </div>
-    </div >
+    </div>
   );
 }
