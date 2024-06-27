@@ -13,22 +13,22 @@ export default function Payment({ amount, onClose }) {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const validateCardNumber = (number) => {
-    const regex = /^\d{16}$/; // 16 digits
+    const regex = /^\d{16}$/;
     return regex.test(number);
   };
 
   const validateExpiryDate = (date) => {
-    const regex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; // MM/YY format
+    const regex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/;
     return regex.test(date);
   };
 
   const validateCVV = (cvv) => {
-    const regex = /^\d{3}$/; // 3 digits
+    const regex = /^\d{3}$/;
     return regex.test(cvv);
   };
 
   const validateName = (name) => {
-    const regex = /^[a-zA-Z\s]+$/; // Letters and spaces
+    const regex = /^[a-zA-Z\s]+$/;
     return regex.test(name);
   };
 

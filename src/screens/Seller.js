@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
@@ -13,13 +13,20 @@ const Seller = () => {
   const [productPricePerDay, setProductPricePerDay] = useState('');
   const [isProductValid, setIsProductValid] = useState(false);
 
+  useEffect(() => {
+    handleProductChange();
+  }, [productName, productImage, productDescription, productPricePerDay]);
+
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
   };
 
   const handleProductChange = () => {
-    const isValidProductName = productName.length >= 3;
-    const isValidProductDescription = productDescription.length > 0;
+    const nameRegex = /^[A-Za-z0-9\s]+$/;
+    const descriptionRegex = /^(?=.*[A-Za-z].{5})[A-Za-z0-9\s\-_,.!?]+$/;
+
+    const isValidProductName = productName.length >= 3 && nameRegex.test(productName);
+    const isValidProductDescription = productDescription.length > 0 && descriptionRegex.test(productDescription);
     const isValidProductPrice = !isNaN(productPricePerDay) && productPricePerDay > 0;
     const isValidProductImage = productImage.trim().length > 0;
 
@@ -85,9 +92,9 @@ const Seller = () => {
             </Logo>
 
             <ProgressBar>
-              <ProgressStep className={step >= 1 ? "completed" : ""}></ProgressStep>
-              <ProgressStep className={step >= 2 ? "completed" : ""}></ProgressStep>
-              <ProgressStep className={step >= 3 ? "completed" : ""}></ProgressStep>
+              <ProgressStep className={step >= 1 ? 'completed' : ''}></ProgressStep>
+              <ProgressStep className={step >= 2 ? 'completed' : ''}></ProgressStep>
+              <ProgressStep className={step >= 3 ? 'completed' : ''}></ProgressStep>
             </ProgressBar>
             {step === 1 && (
               <>
@@ -116,7 +123,6 @@ const Seller = () => {
             )}
             {step === 2 && (
               <>
-                <h2>Step 2: Product Details</h2>
                 <Label>Product Details</Label>
                 <InputContainer>
                   <Input
@@ -124,7 +130,6 @@ const Seller = () => {
                     value={productName}
                     onChange={(e) => setProductName(e.target.value)}
                     placeholder="Product Name"
-                    onBlur={handleProductChange}
                   />
                 </InputContainer>
                 <InputContainer>
@@ -133,7 +138,6 @@ const Seller = () => {
                     value={productImage}
                     onChange={(e) => setProductImage(e.target.value)}
                     placeholder="Product Image URL"
-                    onBlur={handleProductChange}
                   />
                 </InputContainer>
                 <InputContainer>
@@ -141,7 +145,6 @@ const Seller = () => {
                     value={productDescription}
                     onChange={(e) => setProductDescription(e.target.value)}
                     placeholder="Product Description"
-                    onBlur={handleProductChange}
                   />
                 </InputContainer>
                 <InputContainer>
@@ -150,7 +153,6 @@ const Seller = () => {
                     value={productPricePerDay}
                     onChange={(e) => setProductPricePerDay(e.target.value)}
                     placeholder="Price Per Day in $"
-                    onBlur={handleProductChange}
                   />
                 </InputContainer>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
@@ -246,60 +248,6 @@ const TextArea = styled.textarea`
   height: 100px;
 `;
 
-const Domain = styled.span`
-  margin-left: -10px;
-  font-size: 0.9em;
-  color: #ffffff;
-`;
-
-const ValidCheck = styled.span`
-  color: #4caf50;
-  margin-left: 10px;
-`;
-
-const ValidationRules = styled.div`
-  margin: 10px 0;
-  font-size: 1.2em;
-`;
-
-const Label = styled.label`
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-`;
-
-const Button = styled.button`
-  background-color: #6a1b9a;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-  &.disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-`;
-
-const InfoText = styled.p`
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #ffffff;
-  text-align: center;
-`;
-
-const Heading = styled.h1`
-  font-size: 2.5rem;
-  text-align: left;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-style: normal;
-`;
-
 const Logo = styled.div`
   font-size: 10rem;
   font-weight: bold;
@@ -334,3 +282,40 @@ const CategoryButton = styled.button`
   }
 `;
 
+const Label = styled.label`
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+`;
+
+const Button = styled.button`
+  background-color: #6a1b9a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  &.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+`;
+
+const Heading = styled.h1`
+  font-size: 2.5rem;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+`;
+
+const InfoText = styled.p`
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #ffffff;
+  text-align: center;
+`;
