@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 5000;
 const mongoDB = require("./db");
 const cors = require("cors");
 app.use((req, res, next) => {
@@ -22,6 +21,6 @@ app.use("/api", require("./Routes/ProductRoute"));
 app.use("/api", require("./Routes/CategoryRoute"));
 app.use("/api", require("./Routes/OrderRoute"));
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+app.listen(5000, () => {
+  console.log(`Listening on port 5000`);
 });
