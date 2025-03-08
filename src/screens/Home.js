@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Card from '../components/Card';
-import Carousal from '../components/Carousal';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Card from "../components/Card";
+import Carousal from "../components/Carousal";
+import styled from "styled-components";
 
 export default function Home() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [itemCategory, setitemCategory] = useState([]);
   const [Item, setItem] = useState([]);
 
   const loadData = async () => {
     try {
-      let response = await fetch('http://localhost:5000/api/product', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      let response = await fetch(
+        "https://rent-app-1-v5s8.onrender.com/api/product",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       response = await response.json();
       const category = response.category;
@@ -25,7 +28,7 @@ export default function Home() {
       setitemCategory(category);
       setItem(product);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -34,23 +37,22 @@ export default function Home() {
   }, []);
 
   const displayCategories = [
-    'Equipment and Tools',
-    'Transportation',
-    'Event and Party Supplies',
-    'Recreation and Leisure',
-    'Home and Lifestyle',
-    'Electronic and Gadgets',
-    'Fashion and Accessories',
-    'Specialty Items',
-    'Property and Land',
-    'Health and Beauty',
-    'Food and Beverages',
-    'Sports and Outdoors',
-    'Office Supplies',
-    'Costumes',
-    'Camping Gear',
-    'Party Decorations',
-
+    "Equipment and Tools",
+    "Transportation",
+    "Event and Party Supplies",
+    "Recreation and Leisure",
+    "Home and Lifestyle",
+    "Electronic and Gadgets",
+    "Fashion and Accessories",
+    "Specialty Items",
+    "Property and Land",
+    "Health and Beauty",
+    "Food and Beverages",
+    "Sports and Outdoors",
+    "Office Supplies",
+    "Costumes",
+    "Camping Gear",
+    "Party Decorations",
   ];
 
   return (
@@ -75,7 +77,7 @@ export default function Home() {
                   {itemCategory.some((cat) => cat.name === category) ? (
                     category
                   ) : (
-                    <span style={{ color: 'gray' }}>
+                    <span style={{ color: "gray" }}>
                       {category} (Not Available)
                     </span>
                   )}
@@ -130,34 +132,34 @@ export default function Home() {
       <div
         className="container"
         style={{
-          marginTop: '2rem',
-          maxWidth: '1500px',
-          width: '100%',
-          margin: '0 auto',
+          marginTop: "2rem",
+          maxWidth: "1500px",
+          width: "100%",
+          margin: "0 auto",
         }}
       >
         {itemCategory.length === 0
-          ? ''
+          ? ""
           : itemCategory.map((data) => (
-            <div className="mb-3 row" key={data._id}>
-              <div className="fs-3 m-3">{data.name}</div>
-              <hr />
-              {Item.length === 0
-                ? ''
-                : Item.filter(
-                  (item) =>
-                    item.categoryName === data.name &&
-                    item.name.toLowerCase().includes(search.toLowerCase())
-                ).map((filterItems) => (
-                  <div
-                    key={filterItems._id}
-                    className="col-12 col-md-6 col-lg-3"
-                  >
-                    <Card Item={filterItems}></Card>
-                  </div>
-                ))}
-            </div>
-          ))}
+              <div className="mb-3 row" key={data._id}>
+                <div className="fs-3 m-3">{data.name}</div>
+                <hr />
+                {Item.length === 0
+                  ? ""
+                  : Item.filter(
+                      (item) =>
+                        item.categoryName === data.name &&
+                        item.name.toLowerCase().includes(search.toLowerCase())
+                    ).map((filterItems) => (
+                      <div
+                        key={filterItems._id}
+                        className="col-12 col-md-6 col-lg-3"
+                      >
+                        <Card Item={filterItems}></Card>
+                      </div>
+                    ))}
+              </div>
+            ))}
       </div>
 
       <Footer />
@@ -181,7 +183,7 @@ const SearchInput = styled.input`
   outline: none;
   padding-left: 15px;
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Container = styled.div`
@@ -209,7 +211,7 @@ const CategoriesList = styled.div`
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 `;
 
 const MainContent = styled.div`
@@ -238,7 +240,7 @@ const CardContainer = styled.div`
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border: 2px solid #ff7e5f;
   color: white;
   margin-right: 7px;
@@ -247,7 +249,7 @@ const CardContainer = styled.div`
 const Heading = styled.h1`
   font-size: 1.7rem;
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   color: #fff;
 `;
@@ -255,7 +257,7 @@ const Heading = styled.h1`
 const SubHeading = styled.p`
   font-size: 1.1rem;
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: italic;
   font-weight: 500;
   color: #fff;

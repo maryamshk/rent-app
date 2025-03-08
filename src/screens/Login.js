@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const LeftPane = styled.div`
   color: white;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 `;
 
 const RightPane = styled.div`
@@ -33,14 +33,14 @@ const RightPane = styled.div`
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Heading = styled.h1`
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 `;
@@ -48,7 +48,7 @@ const Heading = styled.h1`
 const Heading3 = styled.h1`
   font-size: 2.5rem;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 `;
@@ -103,7 +103,7 @@ const Input = styled.input`
   border-radius: 10px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   &:focus {
     border-color: #ff7e5f;
@@ -120,13 +120,12 @@ const Button = styled.button`
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   &:hover {
     background-color: #feb47b;
   }
 `;
-
 
 const OrDivider = styled.div`
   margin: 1rem;
@@ -136,7 +135,6 @@ const OrDivider = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: normal;
 `;
-
 
 const Footer = styled.div`
   font-size: 1.25rem;
@@ -173,7 +171,7 @@ const PasswordInput = styled.input`
   padding: 1rem;
   border: none;
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   &:focus {
     outline: none;
@@ -194,8 +192,6 @@ const ErrorMessage = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-
-
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
@@ -209,28 +205,31 @@ const Login = () => {
     setValidationError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/loginuser', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: credentials.email,
-          password: credentials.password,
-        }),
-      });
+      const response = await fetch(
+        "https://rent-app-1-v5s8.onrender.com/api/loginuser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: credentials.email,
+            password: credentials.password,
+          }),
+        }
+      );
 
       const json = await response.json();
 
       if (!json.success) {
-        setValidationError('Enter valid credentials');
+        setValidationError("Enter valid credentials");
       } else {
         localStorage.setItem("authToken", json.authToken);
-        localStorage.setItem('userEmail', credentials.email);
+        localStorage.setItem("userEmail", credentials.email);
         navigate("/home");
       }
     } catch (error) {
-      setValidationError('An error occurred. Please try again later.');
+      setValidationError("An error occurred. Please try again later.");
     }
   };
 
@@ -246,7 +245,11 @@ const Login = () => {
     <Container>
       <LeftPane>
         <Heading>Your One-Stop Rental Marketplace.</Heading>
-        <SubHeading>Simplify your life by renting anything you need, all in one place, with ease, security, convenience, and affordable rates, connecting you with trusted providers for a seamless experience.</SubHeading>
+        <SubHeading>
+          Simplify your life by renting anything you need, all in one place,
+          with ease, security, convenience, and affordable rates, connecting you
+          with trusted providers for a seamless experience.
+        </SubHeading>
         <Image src="../imagee.png" alt="Illustration" />
       </LeftPane>
       <RightPane>
@@ -284,7 +287,8 @@ const Login = () => {
           <Button type="submit">Login</Button>
         </Form>
         <Footer>
-          Don't have an account? <StyledLink to="/createuser">Signup</StyledLink>
+          Don't have an account?{" "}
+          <StyledLink to="/createuser">Signup</StyledLink>
         </Footer>
       </RightPane>
     </Container>

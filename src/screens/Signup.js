@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { GoogleLoginButton, FacebookLoginButton } from 'react-social-login-buttons';
-import 'react-datepicker/dist/react-datepicker.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import {
+  GoogleLoginButton,
+  FacebookLoginButton,
+} from "react-social-login-buttons";
+import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [credentials, setCredentials] = useState({
-    name: '',
-    email: '',
-    password: '',
-    location: '',
+    name: "",
+    email: "",
+    password: "",
+    location: "",
   });
 
   const navigate = useNavigate();
@@ -25,33 +28,44 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!credentials.name || !credentials.email || !credentials.password || !credentials.location) {
+    if (
+      !credentials.name ||
+      !credentials.email ||
+      !credentials.password ||
+      !credentials.location
+    ) {
       setValidationError("Please fill in all fields.");
       return;
     }
 
     if (!validatePassword(credentials.password)) {
-      setValidationError("Password must be at least 6 characters long, with at least one number, one uppercase letter, and one special character.");
+      setValidationError(
+        "Password must be at least 6 characters long, with at least one number, one uppercase letter, and one special character."
+      );
 
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/createuser", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-      });
+      const response = await fetch(
+        "https://rent-app-1-v5s8.onrender.com/api/createuser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(credentials),
+        }
+      );
 
       const json = await response.json();
 
       if (!json.success) {
-        setValidationError("Failed to create account. Please check your credentials and try again.");
+        setValidationError(
+          "Failed to create account. Please check your credentials and try again."
+        );
       } else {
-        navigate('/login')
-
+        navigate("/login");
       }
     } catch (error) {
       setValidationError("An error occurred. Please try again later.");
@@ -112,7 +126,11 @@ const Signup = () => {
             />
           </InputContainer>
 
-          {validationError && <div style={{ color: 'red', marginBottom: '1rem' }}>{validationError}</div>}
+          {validationError && (
+            <div style={{ color: "red", marginBottom: "1rem" }}>
+              {validationError}
+            </div>
+          )}
           <Button type="submit">SIGN UP</Button>
         </Form>
         <Footer>
@@ -124,9 +142,6 @@ const Signup = () => {
 };
 
 export default Signup;
-
-
-
 
 const Container = styled.div`
   display: flex;
@@ -152,7 +167,7 @@ const RightPane = styled.div`
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media (max-width: 768px) {
     flex: 1;
@@ -201,7 +216,7 @@ const Label = styled.label`
   color: #333;
   font-size: 1.25rem;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -214,7 +229,7 @@ const Input = styled.input`
   border-radius: 10px;
   font-size: 1.2rem;
   transition: border-color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   &:focus {
     border-color: #ff7e5f;
@@ -232,7 +247,7 @@ const Select = styled.select`
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 1.2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: white;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -259,7 +274,7 @@ const Button = styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 1rem;
 
   &:hover {

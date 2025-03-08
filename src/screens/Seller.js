@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import Navbar from '../components/Navbar';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Seller = () => {
   const navigate = useNavigate();
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState("");
   const [step, setStep] = useState(1);
-  const [productName, setProductName] = useState('');
-  const [productImage, setProductImage] = useState('');
-  const [productDescription, setProductDescription] = useState('');
-  const [productPricePerDay, setProductPricePerDay] = useState('');
+  const [productName, setProductName] = useState("");
+  const [productImage, setProductImage] = useState("");
+  const [productDescription, setProductDescription] = useState("");
+  const [productPricePerDay, setProductPricePerDay] = useState("");
   const [isProductValid, setIsProductValid] = useState(false);
 
   useEffect(() => {
@@ -25,12 +25,21 @@ const Seller = () => {
     const nameRegex = /^[A-Za-z0-9\s]+$/;
     const descriptionRegex = /^(?=.*[A-Za-z].{5})[A-Za-z0-9\s\-_,.!?]+$/;
 
-    const isValidProductName = productName.length >= 3 && nameRegex.test(productName);
-    const isValidProductDescription = productDescription.length > 0 && descriptionRegex.test(productDescription);
-    const isValidProductPrice = !isNaN(productPricePerDay) && productPricePerDay > 0;
+    const isValidProductName =
+      productName.length >= 3 && nameRegex.test(productName);
+    const isValidProductDescription =
+      productDescription.length > 0 &&
+      descriptionRegex.test(productDescription);
+    const isValidProductPrice =
+      !isNaN(productPricePerDay) && productPricePerDay > 0;
     const isValidProductImage = productImage.trim().length > 0;
 
-    setIsProductValid(isValidProductName && isValidProductDescription && isValidProductPrice && isValidProductImage);
+    setIsProductValid(
+      isValidProductName &&
+        isValidProductDescription &&
+        isValidProductPrice &&
+        isValidProductImage
+    );
   };
 
   const handleNextStep = () => {
@@ -48,36 +57,39 @@ const Seller = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch('http://localhost:5000/api/addProduct', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        categoryName: category,
-        name: productName,
-        img: productImage,
-        description: productDescription,
-        price: productPricePerDay,
-      }),
-    });
+    const response = await fetch(
+      "https://rent-app-1-v5s8.onrender.com/api/addProduct",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          categoryName: category,
+          name: productName,
+          img: productImage,
+          description: productDescription,
+          price: productPricePerDay,
+        }),
+      }
+    );
 
     if (response.ok) {
-      navigate('/home');
+      navigate("/home");
     } else {
-      alert('Failed to add product.');
+      alert("Failed to add product.");
     }
   };
 
   const allCategories = [
-    'Equipment and Tools',
-    'Transportation',
-    'Event and Party Supplies',
-    'Recreation and Leisure',
-    'Home and Lifestyle',
-    'Fashion and Accessories',
-    'Specialty Items',
-    'Land and Property Area',
+    "Equipment and Tools",
+    "Transportation",
+    "Event and Party Supplies",
+    "Recreation and Leisure",
+    "Home and Lifestyle",
+    "Fashion and Accessories",
+    "Specialty Items",
+    "Land and Property Area",
   ];
 
   return (
@@ -92,9 +104,15 @@ const Seller = () => {
             </Logo>
 
             <ProgressBar>
-              <ProgressStep className={step >= 1 ? 'completed' : ''}></ProgressStep>
-              <ProgressStep className={step >= 2 ? 'completed' : ''}></ProgressStep>
-              <ProgressStep className={step >= 3 ? 'completed' : ''}></ProgressStep>
+              <ProgressStep
+                className={step >= 1 ? "completed" : ""}
+              ></ProgressStep>
+              <ProgressStep
+                className={step >= 2 ? "completed" : ""}
+              ></ProgressStep>
+              <ProgressStep
+                className={step >= 3 ? "completed" : ""}
+              ></ProgressStep>
             </ProgressBar>
             {step === 1 && (
               <>
@@ -111,11 +129,20 @@ const Seller = () => {
                     </CategoryButton>
                   ))}
                 </CategoryContainer>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginTop: "20px",
+                  }}
+                >
                   <Button onClick={handlePreviousStep} disabled={true}>
                     Back
                   </Button>
-                  <Button onClick={handleNextStep} style={{ marginLeft: '10px' }}>
+                  <Button
+                    onClick={handleNextStep}
+                    style={{ marginLeft: "10px" }}
+                  >
                     Save and Continue
                   </Button>
                 </div>
@@ -155,11 +182,19 @@ const Seller = () => {
                     placeholder="Price Per Day in $"
                   />
                 </InputContainer>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                  <Button onClick={handlePreviousStep}>
-                    Back
-                  </Button>
-                  <Button className={!isProductValid ? 'disabled' : ''} disabled={!isProductValid} onClick={handleNextStep}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginTop: "20px",
+                  }}
+                >
+                  <Button onClick={handlePreviousStep}>Back</Button>
+                  <Button
+                    className={!isProductValid ? "disabled" : ""}
+                    disabled={!isProductValid}
+                    onClick={handleNextStep}
+                  >
                     Save and Continue
                   </Button>
                 </div>
@@ -167,9 +202,7 @@ const Seller = () => {
             )}
             {step === 3 && (
               <>
-                <Button onClick={handleSubmit}>
-                  Submit
-                </Button>
+                <Button onClick={handleSubmit}>Submit</Button>
               </>
             )}
           </Form>
@@ -187,7 +220,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 20px;
 `;
 
@@ -269,8 +302,8 @@ const CategoryContainer = styled.div`
 `;
 
 const CategoryButton = styled.button`
-  background-color: ${(props) => (props.selected ? '#6a1b9a' : '#f1f1f1')};
-  color: ${(props) => (props.selected ? '#fff' : '#000')};
+  background-color: ${(props) => (props.selected ? "#6a1b9a" : "#f1f1f1")};
+  color: ${(props) => (props.selected ? "#fff" : "#000")};
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -308,7 +341,7 @@ const Button = styled.button`
 const Heading = styled.h1`
   font-size: 2.5rem;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 `;
